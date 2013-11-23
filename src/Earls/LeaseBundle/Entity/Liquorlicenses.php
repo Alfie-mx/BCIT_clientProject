@@ -15,20 +15,6 @@ class Liquorlicenses
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=45, nullable=true)
-     */
-    private $address;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="postalZip", type="string", length=45, nullable=true)
-     */
-    private $postalzip;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="businessLicense", type="string", length=45, nullable=true)
      */
     private $businesslicense;
@@ -57,82 +43,16 @@ class Liquorlicenses
     private $liquorlicenseid;
 
     /**
-     * @var \Earls\LeaseBundle\Entity\Provincestate
+     * @var \Earls\LeaseBundle\Entity\Restaurants
      *
-     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Provincestate")
+     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Restaurants")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="provinceStateID", referencedColumnName="provinceStateID")
+     *   @ORM\JoinColumn(name="restaurantID", referencedColumnName="restaurantID")
      * })
      */
-    private $provincestateid;
-
-    /**
-     * @var \Earls\LeaseBundle\Entity\Northamericancities
-     *
-     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Northamericancities")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="city", referencedColumnName="northAmericanCityID")
-     * })
-     */
-    private $city;
-
-    /**
-     * @var \Earls\LeaseBundle\Entity\Corporations
-     *
-     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Corporations")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="corporateID", referencedColumnName="corporateID")
-     * })
-     */
-    private $corporateid;
+    private $restaurantid;
 
 
-
-    /**
-     * Set address
-     *
-     * @param string $address
-     * @return Liquorlicenses
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-    
-        return $this;
-    }
-
-    /**
-     * Get address
-     *
-     * @return string 
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * Set postalzip
-     *
-     * @param string $postalzip
-     * @return Liquorlicenses
-     */
-    public function setPostalzip($postalzip)
-    {
-        $this->postalzip = $postalzip;
-    
-        return $this;
-    }
-
-    /**
-     * Get postalzip
-     *
-     * @return string 
-     */
-    public function getPostalzip()
-    {
-        return $this->postalzip;
-    }
 
     /**
      * Set businesslicense
@@ -214,71 +134,25 @@ class Liquorlicenses
     }
 
     /**
-     * Set provincestateid
+     * Set restaurantid
      *
-     * @param \Earls\LeaseBundle\Entity\Provincestate $provincestateid
+     * @param \Earls\LeaseBundle\Entity\Restaurants $restaurantid
      * @return Liquorlicenses
      */
-    public function setProvincestateid(\Earls\LeaseBundle\Entity\Provincestate $provincestateid = null)
+    public function setRestaurantid(\Earls\LeaseBundle\Entity\Restaurants $restaurantid = null)
     {
-        $this->provincestateid = $provincestateid;
+        $this->restaurantid = $restaurantid;
     
         return $this;
     }
 
     /**
-     * Get provincestateid
+     * Get restaurantid
      *
-     * @return \Earls\LeaseBundle\Entity\Provincestate 
+     * @return \Earls\LeaseBundle\Entity\Restaurants 
      */
-    public function getProvincestateid()
+    public function getRestaurantid()
     {
-        return $this->provincestateid;
-    }
-
-    /**
-     * Set city
-     *
-     * @param \Earls\LeaseBundle\Entity\Northamericancities $city
-     * @return Liquorlicenses
-     */
-    public function setCity(\Earls\LeaseBundle\Entity\Northamericancities $city = null)
-    {
-        $this->city = $city;
-    
-        return $this;
-    }
-
-    /**
-     * Get city
-     *
-     * @return \Earls\LeaseBundle\Entity\Northamericancities 
-     */
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    /**
-     * Set corporateid
-     *
-     * @param \Earls\LeaseBundle\Entity\Corporations $corporateid
-     * @return Liquorlicenses
-     */
-    public function setCorporateid(\Earls\LeaseBundle\Entity\Corporations $corporateid = null)
-    {
-        $this->corporateid = $corporateid;
-    
-        return $this;
-    }
-
-    /**
-     * Get corporateid
-     *
-     * @return \Earls\LeaseBundle\Entity\Corporations 
-     */
-    public function getCorporateid()
-    {
-        return $this->corporateid;
+        return $this->restaurantid;
     }
 }

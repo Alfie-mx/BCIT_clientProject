@@ -5,9 +5,17 @@
       <generator strategy="IDENTITY"/>
     </id>
     <field name="address" type="string" column="address" length="255" nullable="true"/>
-    <field name="city" type="smallint" column="city" nullable="true"/>
-    <field name="provincestateid" type="string" column="provinceStateID" length="4" nullable="true"/>
     <field name="postalzip" type="string" column="postalZip" length="45" nullable="true"/>
+    <many-to-one field="provincestateid" target-entity="Provincestate">
+      <join-columns>
+        <join-column name="provinceStateID" referenced-column-name="provinceStateID"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="city" target-entity="Northamericancities">
+      <join-columns>
+        <join-column name="city" referenced-column-name="northAmericanCityID"/>
+      </join-columns>
+    </many-to-one>
     <many-to-one field="officeid" target-entity="Offices">
       <join-columns>
         <join-column name="officeID" referenced-column-name="officeID"/>

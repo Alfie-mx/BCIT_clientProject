@@ -20,9 +20,9 @@ class Renewals
     private $term;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="exercised", type="string", length=45, nullable=true)
+     * @ORM\Column(name="exercised", type="boolean", nullable=true)
      */
     private $exercised;
 

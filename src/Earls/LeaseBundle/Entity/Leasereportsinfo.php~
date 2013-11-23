@@ -50,16 +50,6 @@ class Leasereportsinfo
     private $leasereportinfoid;
 
     /**
-     * @var \Earls\LeaseBundle\Entity\Reportperiodtypes
-     *
-     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Reportperiodtypes")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="reportTypeID", referencedColumnName="reportTypeID")
-     * })
-     */
-    private $reporttypeid;
-
-    /**
      * @var \Earls\LeaseBundle\Entity\Leases
      *
      * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Leases")
@@ -68,6 +58,16 @@ class Leasereportsinfo
      * })
      */
     private $leaseid;
+
+    /**
+     * @var \Earls\LeaseBundle\Entity\Reportperiodtypes
+     *
+     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Reportperiodtypes")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="reportTypeID", referencedColumnName="reportTypeID")
+     * })
+     */
+    private $reporttypeid;
 
 
 }

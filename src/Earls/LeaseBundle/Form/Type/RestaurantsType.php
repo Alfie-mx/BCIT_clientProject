@@ -34,24 +34,19 @@ class RestaurantsType extends AbstractType
             ->add('restaurantstate')
             ->add('closedate')
             ->add('royaltyfee', 'text')
+            ->add('advertisingfee', 'text')
+            ->add('regionalmngtfee', 'text')
             ->add('yearbuilt', 'text')
             ->add('comments', 'textarea')
-            ->add('rentandmaintenanceid')
-            ->add('regionid', 'entity', array(
-                'class' => 'EarlsLeaseBundle:Regions',
-                'property' => 'region'
-            ))
-            ->add('riskid', new RiskinfoType())
             ->add('storeclassid', 'entity', array(
                 'class' => 'EarlsLeaseBundle:Storeclasses',
                 'property' => 'storeclass'
             ))
-//            ->add('utilityid')
             ->add('propertymanagerid', 'entity', array(
                 'class' => 'EarlsLeaseBundle:Propertymanagers',
                 'property' => 'propertymanagername'
             ))
-//            ->add('liquorlicenseid')
+
             ->add('city', 'entity', array(
                 'class' => 'EarlsLeaseBundle:Northamericancities',
                 'property' => 'city'
@@ -68,10 +63,6 @@ class RestaurantsType extends AbstractType
                 'class' => 'EarlsLeaseBundle:Landlords',
                 'property' => 'landlordname'
             ))
-/*            ->add('licenseid', 'entity', array(
-                'class' => 'EarlsLeaseBundle:Licenses',
-                'property' => 'propertymanagername'
-            ))*/
             ->add('provincestateid', 'entity', array(
                 'class' => 'EarlsLeaseBundle:Provincestate',
                 'property' => 'description'

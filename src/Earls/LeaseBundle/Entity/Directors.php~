@@ -43,16 +43,6 @@ class Directors
     private $directorid;
 
     /**
-     * @var \Earls\LeaseBundle\Entity\Northamericancities
-     *
-     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Northamericancities")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="city", referencedColumnName="northAmericanCityID")
-     * })
-     */
-    private $city;
-
-    /**
      * @var \Earls\LeaseBundle\Entity\Provincestate
      *
      * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Provincestate")
@@ -61,6 +51,16 @@ class Directors
      * })
      */
     private $provincestateid;
+
+    /**
+     * @var \Earls\LeaseBundle\Entity\Northamericancities
+     *
+     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Northamericancities")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="city", referencedColumnName="northAmericanCityID")
+     * })
+     */
+    private $city;
 
 
 }

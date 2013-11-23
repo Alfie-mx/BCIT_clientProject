@@ -26,16 +26,6 @@ class Rentandmaintenances
      *
      * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Owners")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="hvacRepair", referencedColumnName="ownerID")
-     * })
-     */
-    private $hvacrepair;
-
-    /**
-     * @var \Earls\LeaseBundle\Entity\Owners
-     *
-     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Owners")
-     * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="roofReplace", referencedColumnName="ownerID")
      * })
      */
@@ -71,6 +61,16 @@ class Rentandmaintenances
      */
     private $hvacreplace;
 
+    /**
+     * @var \Earls\LeaseBundle\Entity\Owners
+     *
+     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Owners")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="hvacRepair", referencedColumnName="ownerID")
+     * })
+     */
+    private $hvacrepair;
+
 
 
     /**
@@ -81,29 +81,6 @@ class Rentandmaintenances
     public function getRentandmaintenanceid()
     {
         return $this->rentandmaintenanceid;
-    }
-
-    /**
-     * Set hvacrepair
-     *
-     * @param \Earls\LeaseBundle\Entity\Owners $hvacrepair
-     * @return Rentandmaintenances
-     */
-    public function setHvacrepair(\Earls\LeaseBundle\Entity\Owners $hvacrepair = null)
-    {
-        $this->hvacrepair = $hvacrepair;
-    
-        return $this;
-    }
-
-    /**
-     * Get hvacrepair
-     *
-     * @return \Earls\LeaseBundle\Entity\Owners 
-     */
-    public function getHvacrepair()
-    {
-        return $this->hvacrepair;
     }
 
     /**
@@ -196,5 +173,28 @@ class Rentandmaintenances
     public function getHvacreplace()
     {
         return $this->hvacreplace;
+    }
+
+    /**
+     * Set hvacrepair
+     *
+     * @param \Earls\LeaseBundle\Entity\Owners $hvacrepair
+     * @return Rentandmaintenances
+     */
+    public function setHvacrepair(\Earls\LeaseBundle\Entity\Owners $hvacrepair = null)
+    {
+        $this->hvacrepair = $hvacrepair;
+    
+        return $this;
+    }
+
+    /**
+     * Get hvacrepair
+     *
+     * @return \Earls\LeaseBundle\Entity\Owners 
+     */
+    public function getHvacrepair()
+    {
+        return $this->hvacrepair;
     }
 }

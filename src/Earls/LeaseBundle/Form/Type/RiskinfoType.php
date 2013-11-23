@@ -6,7 +6,6 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-
 class RiskinfoType extends AbstractType
 {
         /**
@@ -16,8 +15,8 @@ class RiskinfoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('rentabatement')
-            ->add('exteriormaintenance')
+            ->add('rentabatement', 'text')
+            ->add('exteriormaintenance', 'text')
             ->add('constructionid', 'entity', array(
                 'class' => 'EarlsLeaseBundle:Constructiontypes',
                 'property' => 'constructiontype'

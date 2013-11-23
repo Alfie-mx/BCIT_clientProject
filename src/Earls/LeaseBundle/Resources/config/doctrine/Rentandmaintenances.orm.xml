@@ -4,11 +4,6 @@
     <id name="rentandmaintenanceid" type="smallint" column="rentAndMaintenanceID">
       <generator strategy="IDENTITY"/>
     </id>
-    <many-to-one field="hvacrepair" target-entity="Owners">
-      <join-columns>
-        <join-column name="hvacRepair" referenced-column-name="ownerID"/>
-      </join-columns>
-    </many-to-one>
     <many-to-one field="roofreplace" target-entity="Owners">
       <join-columns>
         <join-column name="roofReplace" referenced-column-name="ownerID"/>
@@ -27,6 +22,11 @@
     <many-to-one field="hvacreplace" target-entity="Owners">
       <join-columns>
         <join-column name="hvacReplace" referenced-column-name="ownerID"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="hvacrepair" target-entity="Owners">
+      <join-columns>
+        <join-column name="hvacRepair" referenced-column-name="ownerID"/>
       </join-columns>
     </many-to-one>
   </entity>

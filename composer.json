@@ -22,7 +22,8 @@
         "braincrafted/bootstrap-bundle": "dev-master",
         "twitter/bootstrap": "2.3.*",
         "symfony/form": "2.3.*",
-        "symfony/validator": "2.3.*"
+        "symfony/validator": "2.3.*",
+        "friendsofsymfony/user-bundle": "~2.0@dev"
     },
     "scripts": {
         "post-install-cmd": [

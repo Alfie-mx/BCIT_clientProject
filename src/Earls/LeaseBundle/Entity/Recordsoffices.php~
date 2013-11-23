@@ -20,20 +20,6 @@ class Recordsoffices
     private $address;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="city", type="smallint", nullable=true)
-     */
-    private $city;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="provinceStateID", type="string", length=4, nullable=true)
-     */
-    private $provincestateid;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="postalZip", type="string", length=45, nullable=true)
@@ -48,6 +34,26 @@ class Recordsoffices
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $recordofficeid;
+
+    /**
+     * @var \Earls\LeaseBundle\Entity\Provincestate
+     *
+     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Provincestate")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="provinceStateID", referencedColumnName="provinceStateID")
+     * })
+     */
+    private $provincestateid;
+
+    /**
+     * @var \Earls\LeaseBundle\Entity\Northamericancities
+     *
+     * @ORM\ManyToOne(targetEntity="Earls\LeaseBundle\Entity\Northamericancities")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="city", referencedColumnName="northAmericanCityID")
+     * })
+     */
+    private $city;
 
     /**
      * @var \Earls\LeaseBundle\Entity\Offices

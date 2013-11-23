@@ -4,24 +4,12 @@
     <id name="liquorlicenseid" type="smallint" column="liquorLicenseID">
       <generator strategy="IDENTITY"/>
     </id>
-    <field name="address" type="string" column="address" length="45" nullable="true"/>
-    <field name="postalzip" type="string" column="postalZip" length="45" nullable="true"/>
     <field name="businesslicense" type="string" column="businessLicense" length="45" nullable="true"/>
     <field name="liquorlicense" type="string" column="liquorLicense" length="45" nullable="true"/>
     <field name="licensedate" type="date" column="licenseDate" nullable="true"/>
-    <many-to-one field="provincestateid" target-entity="Provincestate">
+    <many-to-one field="restaurantid" target-entity="Restaurants">
       <join-columns>
-        <join-column name="provinceStateID" referenced-column-name="provinceStateID"/>
-      </join-columns>
-    </many-to-one>
-    <many-to-one field="city" target-entity="Northamericancities">
-      <join-columns>
-        <join-column name="city" referenced-column-name="northAmericanCityID"/>
-      </join-columns>
-    </many-to-one>
-    <many-to-one field="corporateid" target-entity="Corporations">
-      <join-columns>
-        <join-column name="corporateID" referenced-column-name="corporateID"/>
+        <join-column name="restaurantID" referenced-column-name="restaurantID"/>
       </join-columns>
     </many-to-one>
   </entity>
