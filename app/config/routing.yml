@@ -2,6 +2,10 @@ earls_lease:
     resource: "@EarlsLeaseBundle/Resources/config/routing.yml"
     prefix:   /
 
+earls_corporate:
+    resource: "@EarlsCorporateBundle/Resources/config/routing.yml"
+    prefix:   /corporate
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 

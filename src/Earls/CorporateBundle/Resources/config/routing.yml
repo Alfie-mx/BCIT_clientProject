@@ -1,3 +1,8 @@
 earls_corporate_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: EarlsCorporateBundle:Default:index }
+
+_corporateSummary:
+    resource:   "@EarlsCorporateBundle/Controller/CorporateSummaryController.php"
+    type:       annotation
+    prefix:     /CorporateSummary
