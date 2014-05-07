@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Owners:
+    type: entity
+    table: owners
+    fields:
+        ownerid:
+            id: true
+            type: smallint
+            nullable: false
+            column: ownerID
+            generator:
+                strategy: IDENTITY
+        ownertype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: ownerType
+    lifecycleCallbacks: {  }

@@ -1,0 +1,41 @@
+Earls\CorporateBundle\Entity\Jurisdictions:
+    type: entity
+    table: jurisdictions
+    fields:
+        jurisdictionsid:
+            id: true
+            type: smallint
+            nullable: false
+            column: jurisdictionsID
+            generator:
+                strategy: IDENTITY
+        registereddate:
+            type: date
+            nullable: true
+            column: registeredDate
+        registrationnumber:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: registrationNumber
+    manyToOne:
+        corporateid:
+            targetEntity: Corporations
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporateID:
+                    referencedColumnName: corporateID
+            orphanRemoval: false
+        provincestateid:
+            targetEntity: Provincestate
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                provinceStateID:
+                    referencedColumnName: provinceStateID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

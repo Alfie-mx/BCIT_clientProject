@@ -1,0 +1,107 @@
+Earls\CorporateBundle\Entity\Corporations:
+    type: entity
+    table: corporations
+    fields:
+        corporateid:
+            id: true
+            type: smallint
+            nullable: false
+            column: corporateID
+            generator:
+                strategy: IDENTITY
+        corporatename:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: corporateName
+        filenumber:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: fileNumber
+        respsolicitor:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: respSolicitor
+        usage:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        fiscalyearend:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: fiscalYearEnd
+        registrationnumber:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: registrationNumber
+        registrationdate:
+            type: date
+            nullable: true
+            column: registrationDate
+        seal:
+            type: boolean
+            nullable: true
+        locationseal:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: locationSeal
+        capitalstructure:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: capitalStructure
+        namechanges:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: nameChanges
+        corpstatus:
+            type: boolean
+            nullable: true
+            column: corpStatus
+        dissolutiondate:
+            type: date
+            nullable: true
+            column: dissolutionDate
+    manyToOne:
+        provincestateid:
+            targetEntity: Provincestate
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                provinceStateID:
+                    referencedColumnName: provinceStateID
+            orphanRemoval: false
+        recordsofficeid:
+            targetEntity: Recordsoffices
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                recordsOfficeID:
+                    referencedColumnName: recordOfficeID
+            orphanRemoval: false
+        registeredofficeid:
+            targetEntity: Registeredoffices
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                registeredOfficeID:
+                    referencedColumnName: registeredOfficeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

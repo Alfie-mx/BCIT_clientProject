@@ -5,9 +5,9 @@ namespace Earls\CorporateBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Provincestate
+ * Billingowners
  */
-class Provincestate
+class Billingowners
 {
     /**
      * @var string
@@ -15,16 +15,16 @@ class Provincestate
     private $description;
 
     /**
-     * @var string
+     * @var integer
      */
-    private $provincestateid;
+    private $billingownerid;
 
 
     /**
      * Set description
      *
      * @param string $description
-     * @return Provincestate
+     * @return Billingowners
      */
     public function setDescription($description)
     {
@@ -44,12 +44,12 @@ class Provincestate
     }
 
     /**
-     * Get provincestateid
+     * Get billingownerid
      *
-     * @return string 
+     * @return integer 
      */
-    public function getProvincestateid()
+    public function getBillingownerid()
     {
-        return $this->provincestateid;
+        return $this->billingownerid;
     }
 }

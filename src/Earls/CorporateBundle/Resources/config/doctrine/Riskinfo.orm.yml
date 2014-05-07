@@ -1,0 +1,51 @@
+Earls\CorporateBundle\Entity\Riskinfo:
+    type: entity
+    table: riskinfo
+    fields:
+        riskid:
+            id: true
+            type: smallint
+            nullable: false
+            column: riskID
+            generator:
+                strategy: IDENTITY
+        rentabatement:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: rentAbatement
+        exteriormaintenance:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    manyToOne:
+        restaurantid:
+            targetEntity: Restaurants
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                restaurantID:
+                    referencedColumnName: restaurantID
+            orphanRemoval: false
+        constructionid:
+            targetEntity: Constructiontypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                constructionID:
+                    referencedColumnName: constructionID
+            orphanRemoval: false
+        insuredby:
+            targetEntity: Owners
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                insuredBy:
+                    referencedColumnName: ownerID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

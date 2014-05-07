@@ -1,0 +1,17 @@
+Earls\CorporateBundle\Entity\Billingowners:
+    type: entity
+    table: billingowners
+    fields:
+        billingownerid:
+            id: true
+            type: smallint
+            nullable: false
+            column: billingOwnerID
+            generator:
+                strategy: IDENTITY
+        description:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

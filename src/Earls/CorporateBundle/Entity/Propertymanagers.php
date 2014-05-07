@@ -5,14 +5,14 @@ namespace Earls\CorporateBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Offices
+ * Propertymanagers
  */
-class Offices
+class Propertymanagers
 {
     /**
      * @var string
      */
-    private $officename;
+    private $propertymanagername;
 
     /**
      * @var string
@@ -25,9 +25,24 @@ class Offices
     private $postalzip;
 
     /**
+     * @var string
+     */
+    private $attention;
+
+    /**
+     * @var string
+     */
+    private $phone;
+
+    /**
+     * @var string
+     */
+    private $fax;
+
+    /**
      * @var integer
      */
-    private $officeid;
+    private $propertymanagerid;
 
     /**
      * @var \Earls\CorporateBundle\Entity\Provincestate
@@ -41,33 +56,33 @@ class Offices
 
 
     /**
-     * Set officename
+     * Set propertymanagername
      *
-     * @param string $officename
-     * @return Offices
+     * @param string $propertymanagername
+     * @return Propertymanagers
      */
-    public function setOfficename($officename)
+    public function setPropertymanagername($propertymanagername)
     {
-        $this->officename = $officename;
+        $this->propertymanagername = $propertymanagername;
     
         return $this;
     }
 
     /**
-     * Get officename
+     * Get propertymanagername
      *
      * @return string 
      */
-    public function getOfficename()
+    public function getPropertymanagername()
     {
-        return $this->officename;
+        return $this->propertymanagername;
     }
 
     /**
      * Set address
      *
      * @param string $address
-     * @return Offices
+     * @return Propertymanagers
      */
     public function setAddress($address)
     {
@@ -90,7 +105,7 @@ class Offices
      * Set postalzip
      *
      * @param string $postalzip
-     * @return Offices
+     * @return Propertymanagers
      */
     public function setPostalzip($postalzip)
     {
@@ -110,20 +125,89 @@ class Offices
     }
 
     /**
-     * Get officeid
+     * Set attention
+     *
+     * @param string $attention
+     * @return Propertymanagers
+     */
+    public function setAttention($attention)
+    {
+        $this->attention = $attention;
+    
+        return $this;
+    }
+
+    /**
+     * Get attention
+     *
+     * @return string 
+     */
+    public function getAttention()
+    {
+        return $this->attention;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     * @return Propertymanagers
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set fax
+     *
+     * @param string $fax
+     * @return Propertymanagers
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+    
+        return $this;
+    }
+
+    /**
+     * Get fax
+     *
+     * @return string 
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
+
+    /**
+     * Get propertymanagerid
      *
      * @return integer 
      */
-    public function getOfficeid()
+    public function getPropertymanagerid()
     {
-        return $this->officeid;
+        return $this->propertymanagerid;
     }
 
     /**
      * Set provincestateid
      *
      * @param \Earls\CorporateBundle\Entity\Provincestate $provincestateid
-     * @return Offices
+     * @return Propertymanagers
      */
     public function setProvincestateid(\Earls\CorporateBundle\Entity\Provincestate $provincestateid = null)
     {
@@ -146,7 +230,7 @@ class Offices
      * Set city
      *
      * @param \Earls\CorporateBundle\Entity\Northamericancities $city
-     * @return Offices
+     * @return Propertymanagers
      */
     public function setCity(\Earls\CorporateBundle\Entity\Northamericancities $city = null)
     {

@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Utilitytypes:
+    type: entity
+    table: utilitytypes
+    fields:
+        utilitytypeid:
+            id: true
+            type: smallint
+            nullable: false
+            column: utilityTypeID
+            generator:
+                strategy: IDENTITY
+        utilitytype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: utilityType
+    lifecycleCallbacks: {  }

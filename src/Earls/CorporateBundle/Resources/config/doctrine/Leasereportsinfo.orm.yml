@@ -1,0 +1,47 @@
+Earls\CorporateBundle\Entity\Leasereportsinfo:
+    type: entity
+    table: leasereportsinfo
+    fields:
+        leasereportinfoid:
+            id: true
+            type: smallint
+            nullable: false
+            column: leaseReportInfoID
+            generator:
+                strategy: IDENTITY
+        iscertifiedsales:
+            type: boolean
+            nullable: true
+            column: isCertifiedSales
+        duedate:
+            type: date
+            nullable: true
+            column: dueDate
+        isaudit:
+            type: boolean
+            nullable: true
+            column: isAudit
+        iscertified:
+            type: boolean
+            nullable: true
+            column: isCertified
+    manyToOne:
+        leaseid:
+            targetEntity: Leases
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                leaseID:
+                    referencedColumnName: leaseID
+            orphanRemoval: false
+        reporttypeid:
+            targetEntity: Reportperiodtypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                reportTypeID:
+                    referencedColumnName: reportTypeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

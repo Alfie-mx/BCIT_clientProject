@@ -1,0 +1,58 @@
+Earls\CorporateBundle\Entity\Rentandmaintenances:
+    type: entity
+    table: rentandmaintenances
+    fields:
+        rentandmaintenanceid:
+            id: true
+            type: smallint
+            nullable: false
+            column: rentAndMaintenanceID
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        hvacrepair:
+            targetEntity: Owners
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                hvacRepair:
+                    referencedColumnName: ownerID
+            orphanRemoval: false
+        hvacreplace:
+            targetEntity: Owners
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                hvacReplace:
+                    referencedColumnName: ownerID
+            orphanRemoval: false
+        restaurantid:
+            targetEntity: Restaurants
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                restaurantID:
+                    referencedColumnName: restaurantID
+            orphanRemoval: false
+        roofrepair:
+            targetEntity: Owners
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                roofRepair:
+                    referencedColumnName: ownerID
+            orphanRemoval: false
+        roofreplace:
+            targetEntity: Owners
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                roofReplace:
+                    referencedColumnName: ownerID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Storeclasses:
+    type: entity
+    table: storeclasses
+    fields:
+        storeclassid:
+            id: true
+            type: smallint
+            nullable: false
+            column: storeClassID
+            generator:
+                strategy: IDENTITY
+        storeclass:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: storeClass
+    lifecycleCallbacks: {  }

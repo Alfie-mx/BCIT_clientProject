@@ -1,0 +1,153 @@
+Earls\CorporateBundle\Entity\Leases:
+    type: entity
+    table: leases
+    fields:
+        leaseid:
+            id: true
+            type: smallint
+            nullable: false
+            column: leaseID
+            generator:
+                strategy: IDENTITY
+        leasetype:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: leaseType
+        leasedate:
+            type: date
+            nullable: true
+            column: leaseDate
+        term:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        commencementdate:
+            type: date
+            nullable: true
+            column: commencementDate
+        expirydate:
+            type: date
+            nullable: true
+            column: expiryDate
+        optiontime:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: optionTime
+        areamain:
+            type: float
+            nullable: true
+            column: areaMain
+        areamezzanine:
+            type: float
+            nullable: true
+            column: areaMezzanine
+        areapatio:
+            type: float
+            nullable: true
+            column: areaPatio
+        areaother:
+            type: float
+            nullable: true
+            column: areaOther
+        surveyeddescription:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: surveyedDescription
+        renewalterms:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: renewalTerms
+        renewaloptiondate:
+            type: date
+            nullable: true
+            column: renewalOptionDate
+        exclusiveuse:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: exclusiveUse
+        tiallowance:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: tiAllowance
+        radiusclause:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: radiusClause
+        indemnifier:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        indemnityperiod:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: indemnityPeriod
+        indemnityexpiry:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: indemnityExpiry
+        otherdescription:
+            type: string
+            length: 955
+            fixed: false
+            nullable: true
+            column: otherDescription
+        renewalcomments:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: renewalComments
+        timestamp:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: timeStamp
+        areaupperfloor:
+            type: float
+            nullable: true
+            column: areaUpperFloor
+        showinlease:
+            type: boolean
+            nullable: true
+            column: showInLease
+    manyToOne:
+        restaurantid:
+            targetEntity: Restaurants
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                restaurantID:
+                    referencedColumnName: restaurantID
+            orphanRemoval: false
+        leasereportinfoid:
+            targetEntity: Leasereportsinfo
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                leaseReportInfoID:
+                    referencedColumnName: leaseReportInfoID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

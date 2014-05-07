@@ -1,0 +1,63 @@
+Earls\CorporateBundle\Entity\Landlords:
+    type: entity
+    table: landlords
+    fields:
+        landlordid:
+            id: true
+            type: smallint
+            nullable: false
+            column: landlordID
+            generator:
+                strategy: IDENTITY
+        landlordname:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: landlordName
+        address:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        postalzip:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: postalZip
+        attention:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        phone:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        fax:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    manyToOne:
+        city:
+            targetEntity: Northamericancities
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                city:
+                    referencedColumnName: northAmericanCityID
+            orphanRemoval: false
+        provincestateid:
+            targetEntity: Provincestate
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                provinceStateID:
+                    referencedColumnName: provinceStateID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

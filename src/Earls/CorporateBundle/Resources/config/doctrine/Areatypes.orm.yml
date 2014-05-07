@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Areatypes:
+    type: entity
+    table: areatypes
+    fields:
+        areatypeid:
+            id: true
+            type: smallint
+            nullable: false
+            column: areaTypeID
+            generator:
+                strategy: IDENTITY
+        areatype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: areaType
+    lifecycleCallbacks: {  }

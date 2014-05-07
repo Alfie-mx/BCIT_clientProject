@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Buildingtypes:
+    type: entity
+    table: buildingtypes
+    fields:
+        buildingtypeid:
+            id: true
+            type: smallint
+            nullable: false
+            column: buildingTypeID
+            generator:
+                strategy: IDENTITY
+        buildingtype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: buildingType
+    lifecycleCallbacks: {  }

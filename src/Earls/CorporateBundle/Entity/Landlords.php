@@ -5,14 +5,14 @@ namespace Earls\CorporateBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Offices
+ * Landlords
  */
-class Offices
+class Landlords
 {
     /**
      * @var string
      */
-    private $officename;
+    private $landlordname;
 
     /**
      * @var string
@@ -25,9 +25,24 @@ class Offices
     private $postalzip;
 
     /**
+     * @var string
+     */
+    private $attention;
+
+    /**
+     * @var string
+     */
+    private $phone;
+
+    /**
+     * @var string
+     */
+    private $fax;
+
+    /**
      * @var integer
      */
-    private $officeid;
+    private $landlordid;
 
     /**
      * @var \Earls\CorporateBundle\Entity\Provincestate
@@ -41,33 +56,33 @@ class Offices
 
 
     /**
-     * Set officename
+     * Set landlordname
      *
-     * @param string $officename
-     * @return Offices
+     * @param string $landlordname
+     * @return Landlords
      */
-    public function setOfficename($officename)
+    public function setLandlordname($landlordname)
     {
-        $this->officename = $officename;
+        $this->landlordname = $landlordname;
     
         return $this;
     }
 
     /**
-     * Get officename
+     * Get landlordname
      *
      * @return string 
      */
-    public function getOfficename()
+    public function getLandlordname()
     {
-        return $this->officename;
+        return $this->landlordname;
     }
 
     /**
      * Set address
      *
      * @param string $address
-     * @return Offices
+     * @return Landlords
      */
     public function setAddress($address)
     {
@@ -90,7 +105,7 @@ class Offices
      * Set postalzip
      *
      * @param string $postalzip
-     * @return Offices
+     * @return Landlords
      */
     public function setPostalzip($postalzip)
     {
@@ -110,20 +125,89 @@ class Offices
     }
 
     /**
-     * Get officeid
+     * Set attention
+     *
+     * @param string $attention
+     * @return Landlords
+     */
+    public function setAttention($attention)
+    {
+        $this->attention = $attention;
+    
+        return $this;
+    }
+
+    /**
+     * Get attention
+     *
+     * @return string 
+     */
+    public function getAttention()
+    {
+        return $this->attention;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     * @return Landlords
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string 
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set fax
+     *
+     * @param string $fax
+     * @return Landlords
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+    
+        return $this;
+    }
+
+    /**
+     * Get fax
+     *
+     * @return string 
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
+
+    /**
+     * Get landlordid
      *
      * @return integer 
      */
-    public function getOfficeid()
+    public function getLandlordid()
     {
-        return $this->officeid;
+        return $this->landlordid;
     }
 
     /**
      * Set provincestateid
      *
      * @param \Earls\CorporateBundle\Entity\Provincestate $provincestateid
-     * @return Offices
+     * @return Landlords
      */
     public function setProvincestateid(\Earls\CorporateBundle\Entity\Provincestate $provincestateid = null)
     {
@@ -146,7 +230,7 @@ class Offices
      * Set city
      *
      * @param \Earls\CorporateBundle\Entity\Northamericancities $city
-     * @return Offices
+     * @return Landlords
      */
     public function setCity(\Earls\CorporateBundle\Entity\Northamericancities $city = null)
     {

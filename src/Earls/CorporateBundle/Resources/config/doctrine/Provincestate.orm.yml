@@ -1,0 +1,19 @@
+Earls\CorporateBundle\Entity\Provincestate:
+    type: entity
+    table: provincestate
+    fields:
+        provincestateid:
+            id: true
+            type: string
+            length: 4
+            fixed: false
+            nullable: false
+            column: provinceStateID
+            generator:
+                strategy: IDENTITY
+        description:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

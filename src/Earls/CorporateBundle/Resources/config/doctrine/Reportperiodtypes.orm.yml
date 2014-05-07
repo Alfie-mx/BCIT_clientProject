@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Reportperiodtypes:
+    type: entity
+    table: reportperiodtypes
+    fields:
+        reporttypeid:
+            id: true
+            type: smallint
+            nullable: false
+            column: reportTypeID
+            generator:
+                strategy: IDENTITY
+        periodtype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: periodType
+    lifecycleCallbacks: {  }

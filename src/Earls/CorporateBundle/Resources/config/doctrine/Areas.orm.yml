@@ -1,0 +1,63 @@
+Earls\CorporateBundle\Entity\Areas:
+    type: entity
+    table: areas
+    fields:
+        areaid:
+            id: true
+            type: smallint
+            nullable: false
+            column: areaID
+            generator:
+                strategy: IDENTITY
+        entry:
+            type: integer
+            unsigned: false
+            nullable: true
+        bar:
+            type: integer
+            unsigned: false
+            nullable: true
+        lounge:
+            type: integer
+            unsigned: false
+            nullable: true
+        dining:
+            type: integer
+            unsigned: false
+            nullable: true
+        washrooms:
+            type: integer
+            unsigned: false
+            nullable: true
+        boh:
+            type: integer
+            unsigned: false
+            nullable: true
+        patio:
+            type: integer
+            unsigned: false
+            nullable: true
+        totalarea:
+            type: integer
+            unsigned: false
+            nullable: true
+    manyToOne:
+        areatypeid:
+            targetEntity: Areatypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                areatypeID:
+                    referencedColumnName: areaTypeID
+            orphanRemoval: false
+        restaurantid:
+            targetEntity: Restaurants
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                restaurantID:
+                    referencedColumnName: restaurantID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

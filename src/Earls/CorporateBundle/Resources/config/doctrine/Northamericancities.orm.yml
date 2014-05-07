@@ -1,0 +1,17 @@
+Earls\CorporateBundle\Entity\Northamericancities:
+    type: entity
+    table: northamericancities
+    fields:
+        northamericancityid:
+            id: true
+            type: smallint
+            nullable: false
+            column: northAmericanCityID
+            generator:
+                strategy: IDENTITY
+        city:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

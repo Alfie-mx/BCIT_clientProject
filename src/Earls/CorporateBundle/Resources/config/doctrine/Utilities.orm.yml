@@ -1,0 +1,48 @@
+Earls\CorporateBundle\Entity\Utilities:
+    type: entity
+    table: utilities
+    fields:
+        utilityid:
+            id: true
+            type: smallint
+            nullable: false
+            column: utilityID
+            generator:
+                strategy: IDENTITY
+        ismetered:
+            type: boolean
+            nullable: true
+            column: isMetered
+        iscam:
+            type: boolean
+            nullable: true
+            column: isCAM
+    manyToOne:
+        restaurantid:
+            targetEntity: Restaurants
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                restaurantID:
+                    referencedColumnName: restaurantID
+            orphanRemoval: false
+        billingby:
+            targetEntity: Billingowners
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                billingBy:
+                    referencedColumnName: billingOwnerID
+            orphanRemoval: false
+        utilitytypeid:
+            targetEntity: Utilitytypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                utilityTypeID:
+                    referencedColumnName: utilityTypeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,23 @@
+Earls\CorporateBundle\Entity\Regions:
+    type: entity
+    table: regions
+    fields:
+        regionid:
+            id: true
+            type: smallint
+            nullable: false
+            column: regionID
+            generator:
+                strategy: IDENTITY
+        regionmanager:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: regionManager
+        region:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

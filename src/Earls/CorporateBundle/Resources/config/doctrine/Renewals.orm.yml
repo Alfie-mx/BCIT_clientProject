@@ -1,0 +1,34 @@
+Earls\CorporateBundle\Entity\Renewals:
+    type: entity
+    table: renewals
+    fields:
+        renewalid:
+            id: true
+            type: smallint
+            nullable: false
+            column: renewalID
+            generator:
+                strategy: IDENTITY
+        term:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        exercised:
+            type: boolean
+            nullable: true
+        showinleasereport:
+            type: boolean
+            nullable: true
+            column: showInLeaseReport
+    manyToOne:
+        leaseid:
+            targetEntity: Leases
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                leaseID:
+                    referencedColumnName: leaseID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

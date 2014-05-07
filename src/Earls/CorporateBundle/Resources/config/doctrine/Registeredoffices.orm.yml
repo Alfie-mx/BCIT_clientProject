@@ -1,0 +1,47 @@
+Earls\CorporateBundle\Entity\Registeredoffices:
+    type: entity
+    table: registeredoffices
+    fields:
+        registeredofficeid:
+            id: true
+            type: smallint
+            nullable: false
+            column: registeredOfficeID
+            generator:
+                strategy: IDENTITY
+        address:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        city:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        postalzip:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: postalZip
+    manyToOne:
+        officeid:
+            targetEntity: Offices
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                officeID:
+                    referencedColumnName: officeID
+            orphanRemoval: false
+        provincestateid:
+            targetEntity: Provincestate
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                provinceStateID:
+                    referencedColumnName: provinceStateID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

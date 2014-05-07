@@ -1,0 +1,239 @@
+Earls\CorporateBundle\Entity\Restaurants:
+    type: entity
+    table: restaurants
+    fields:
+        restaurantid:
+            id: true
+            type: smallint
+            nullable: false
+            column: restaurantID
+            generator:
+                strategy: IDENTITY
+        storefilenumber:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: storeFileNumber
+        tenant:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+        storenickname:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        address:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        postalzip:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: postalZip
+        openingdate:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: openingDate
+        legaldescription:
+            type: string
+            length: 300
+            fixed: false
+            nullable: true
+        diningroomseating:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: diningRoomSeating
+        loungeseating:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: loungeSeating
+        patioseating:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: patioSeating
+        diningroomtable:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: diningRoomTable
+        loungetable:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: loungeTable
+        patiotable:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: patioTable
+        departmentnumber:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: departmentNumber
+        restaurantstate:
+            type: boolean
+            nullable: true
+            column: restaurantState
+        closedate:
+            type: date
+            nullable: true
+            column: closeDate
+        royaltyfee:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: royaltyFee
+        advertisingfee:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: advertisingFee
+        regionalmngtfee:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: regionalMngtFee
+        yearbuilt:
+            type: string
+            length: 4
+            fixed: false
+            nullable: true
+            column: yearBuilt
+        comments:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+    manyToOne:
+        city:
+            targetEntity: Northamericancities
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                city:
+                    referencedColumnName: northAmericanCityID
+            orphanRemoval: false
+        provincestateid:
+            targetEntity: Provincestate
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                provinceStateID:
+                    referencedColumnName: provinceStateID
+            orphanRemoval: false
+        liquorlicenseid:
+            targetEntity: Liquorlicenses
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                liquorLicenseID:
+                    referencedColumnName: liquorLicenseID
+            orphanRemoval: false
+        utilityid:
+            targetEntity: Utilities
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                utilityID:
+                    referencedColumnName: utilityID
+            orphanRemoval: false
+        rentandmaintenanceid:
+            targetEntity: Rentandmaintenances
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                rentAndMaintenanceID:
+                    referencedColumnName: rentAndMaintenanceID
+            orphanRemoval: false
+        riskid:
+            targetEntity: Riskinfo
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                riskID:
+                    referencedColumnName: riskID
+            orphanRemoval: false
+        buildingtype:
+            targetEntity: Buildingtypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                buildingType:
+                    referencedColumnName: buildingTypeID
+            orphanRemoval: false
+        corporateid:
+            targetEntity: Corporations
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporateID:
+                    referencedColumnName: corporateID
+            orphanRemoval: false
+        landlordid:
+            targetEntity: Landlords
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                landlordID:
+                    referencedColumnName: landlordID
+            orphanRemoval: false
+        licenseid:
+            targetEntity: Licenses
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                licenseID:
+                    referencedColumnName: licenseID
+            orphanRemoval: false
+        propertymanagerid:
+            targetEntity: Propertymanagers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                propertymanagerID:
+                    referencedColumnName: propertyManagerID
+            orphanRemoval: false
+        regionid:
+            targetEntity: Regions
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                regionID:
+                    referencedColumnName: regionID
+            orphanRemoval: false
+        storeclassid:
+            targetEntity: Storeclasses
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                storeClassID:
+                    referencedColumnName: storeClassID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

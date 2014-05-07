@@ -1,0 +1,23 @@
+Earls\CorporateBundle\Entity\Constructiontypes:
+    type: entity
+    table: constructiontypes
+    fields:
+        constructionid:
+            id: true
+            type: smallint
+            nullable: false
+            column: constructionID
+            generator:
+                strategy: IDENTITY
+        code:
+            type: string
+            length: 10
+            fixed: false
+            nullable: true
+        constructiontype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: constructionType
+    lifecycleCallbacks: {  }

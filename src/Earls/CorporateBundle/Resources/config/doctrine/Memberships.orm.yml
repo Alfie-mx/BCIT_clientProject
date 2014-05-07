@@ -1,0 +1,45 @@
+Earls\CorporateBundle\Entity\Memberships:
+    type: entity
+    table: memberships
+    fields:
+        membershipid:
+            id: true
+            type: smallint
+            nullable: false
+            column: membershipID
+            generator:
+                strategy: IDENTITY
+        numberofshares:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: numberOfShares
+    manyToOne:
+        corporateid:
+            targetEntity: Corporations
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporateID:
+                    referencedColumnName: corporateID
+            orphanRemoval: false
+        directorid:
+            targetEntity: Directors
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                directorID:
+                    referencedColumnName: directorID
+            orphanRemoval: false
+        sharetypeid:
+            targetEntity: Sharetypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                shareTypeID:
+                    referencedColumnName: shareTypeID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

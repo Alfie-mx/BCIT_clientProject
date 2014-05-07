@@ -1,0 +1,38 @@
+Earls\CorporateBundle\Entity\Liquorlicenses:
+    type: entity
+    table: liquorlicenses
+    fields:
+        liquorlicenseid:
+            id: true
+            type: smallint
+            nullable: false
+            column: liquorLicenseID
+            generator:
+                strategy: IDENTITY
+        businesslicense:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: businessLicense
+        liquorlicense:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: liquorLicense
+        licensedate:
+            type: date
+            nullable: true
+            column: licenseDate
+    manyToOne:
+        restaurantid:
+            targetEntity: Restaurants
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                restaurantID:
+                    referencedColumnName: restaurantID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

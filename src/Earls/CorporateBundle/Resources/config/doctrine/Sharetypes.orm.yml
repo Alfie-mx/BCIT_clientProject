@@ -1,0 +1,18 @@
+Earls\CorporateBundle\Entity\Sharetypes:
+    type: entity
+    table: sharetypes
+    fields:
+        sharetypeid:
+            id: true
+            type: smallint
+            nullable: false
+            column: shareTypeID
+            generator:
+                strategy: IDENTITY
+        sharetype:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: shareType
+    lifecycleCallbacks: {  }

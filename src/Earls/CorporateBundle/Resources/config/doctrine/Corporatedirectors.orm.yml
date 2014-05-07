@@ -1,0 +1,36 @@
+Earls\CorporateBundle\Entity\Corporatedirectors:
+    type: entity
+    table: corporatedirectors
+    fields:
+        corporatedirectorid:
+            id: true
+            type: smallint
+            nullable: false
+            column: corporatedirectorID
+            generator:
+                strategy: IDENTITY
+        position:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    manyToOne:
+        directorid:
+            targetEntity: Directors
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                directorID:
+                    referencedColumnName: directorID
+            orphanRemoval: false
+        corporateid:
+            targetEntity: Corporations
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                corporateID:
+                    referencedColumnName: corporateID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

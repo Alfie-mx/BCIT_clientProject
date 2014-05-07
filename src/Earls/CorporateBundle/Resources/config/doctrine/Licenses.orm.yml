@@ -1,0 +1,29 @@
+Earls\CorporateBundle\Entity\Licenses:
+    type: entity
+    table: licenses
+    fields:
+        licenseid:
+            id: true
+            type: smallint
+            nullable: false
+            column: licenseID
+            generator:
+                strategy: IDENTITY
+        licenseagreement:
+            type: boolean
+            nullable: true
+            column: licenseAgreement
+        startdate:
+            type: date
+            nullable: true
+            column: startDate
+        expirarydate:
+            type: date
+            nullable: true
+            column: expiraryDate
+        comments:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }
