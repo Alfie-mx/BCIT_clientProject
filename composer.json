@@ -24,7 +24,9 @@
         "symfony/form": "2.3.*",
         "symfony/validator": "2.3.*",
         "friendsofsymfony/user-bundle": "~2.0@dev",
-        "phpword/phpword": "0.6.2"
+        "phpword/phpword": "0.6.2",
+        "earls/rhino-report-bundle": "dev-master@dev",
+        "symfony/framework-bundle": "2.1.*"
 
     },
     "repositories": [
